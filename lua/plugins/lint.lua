@@ -17,7 +17,6 @@ return {
       }
 
       local ensure_installed = vim.iter(vim.tbl_values(lint.linters_by_ft)):flatten():totable()
-      print(ensure_installed)
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       -- Create autocommand which carries out the actual linting

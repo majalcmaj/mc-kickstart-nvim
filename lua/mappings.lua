@@ -1,4 +1,5 @@
-vim.keymap.set('n', '<leader>bD', function()
+local map = vim.keymap.set
+map('n', '<leader>bD', function()
   local current_buf = vim.api.nvim_get_current_buf()
   for _, i in ipairs(vim.api.nvim_list_bufs()) do
     if i ~= current_buf then
